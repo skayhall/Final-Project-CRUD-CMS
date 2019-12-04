@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Diagnostics;
+
+namespace FinalProject_PagesCMS
+{
+    public partial class ShowPageCMS : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            PagesCMSDB db = new PagesCMSDB();
+            ShowPageInfo(db);
+
+        }
+
+        protected void ShowPageInfo(PagesCMSDB db)
+        {
+            Debug.WriteLine("I am trying to show a page");
+            bool valid = true;
+            string pagecmsid = Request.QueryString["pagecmsid"];
+            if (String.IsNullOrEmpty(pagecmsid)) valid = false;
+
+
+            if (valid)
+            {
+
+                PageCMS page_record = db.FindPageCMS(Int32.Parse(pagecmsid));
+
+                Debug.WriteLine("the page is "+ page_record.GetCMStitle());
+                page_title.InnerHtml = page_record.GetCMStitle();
+                page_body.InnerHtml = page_record.GetCMSbody();
+
+            }
+            else
+            {
+                valid = false;
+            }
+
+
+            if (!valid)
+            {
+                pagecms.InnerHtml = "There was an error finding that student.";
+            }
+        }
+
+
+
+        protected void Delete_PageCMS(object sender, EventArgs e)
+        {
+            bool valid = true;
+            string pagecmsid = Request.QueryString["pagecmsid"];
+            if (String.IsNullOrEmpty(pagecmsid)) valid = false;
+
+            PagesCMSDB db = new PagesCMSDB();
+
+            //deleting the page from the system
+            if (valid)
+            {
+                db.DeletePageCMS(Int32.Parse(pagecmsid));
+                Response.Redirect("ListPageCMS.aspx");
+            }
+        }
+
+
+
+    }
+}

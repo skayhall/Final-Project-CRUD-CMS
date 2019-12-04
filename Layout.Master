@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.Master.cs" 
+    Inherits="FinalProject_PagesCMS.Layout" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <title>Pages CMS</title>
+    <link rel="stylesheet" type="text/css" href="Content/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Quicksand&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="website-title">
+            Welcome to the Pages CMS
+        </div>
+
+        <nav>
+            <p>Navigation Menu</p>
+            <ul>
+                <li><a href="Homepage.aspx">Home</a></li>
+                <li><a href="ListPageCMS.aspx">Pages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <div class="cwidth">
+        <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+    <footer>
+        <div class="cwidth">
+            Copyright 2019 | S Kay Creative Agency
+        </div>
+    </footer>
+</body>
+</html>
