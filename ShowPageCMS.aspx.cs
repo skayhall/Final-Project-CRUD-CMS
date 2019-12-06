@@ -43,7 +43,7 @@ namespace FinalProject_PagesCMS
 
             if (!valid)
             {
-                pagecms.InnerHtml = "There was an error finding that student.";
+                pagecms.InnerHtml = "There was an error finding that page.";
             }
         }
 

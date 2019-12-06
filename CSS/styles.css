@@ -28,15 +28,17 @@ header {
 }
 
 footer {
-    margin-top: 50em;
+    margin-top: 10em;
     padding-bottom: 50px;
     padding-top: 50px;
     font-weight: bold;
     display: block;
 }
 
-body {
+body, html {
     font-family: 'Quicksand', sans-serif;
+    margin:0;
+    padding:0;
 }
 
 /*NAV STYLES*/
@@ -117,10 +119,6 @@ main {
     text-align: center;
 }
 
-.database_preview h2 {
-    color: indianred;
-    font-family: Nunito, sans-serif;
-}
 
 img {
     width: 100%;
@@ -134,16 +132,13 @@ img {
     flex-flow: row wrap;
 }
 
-.database_preview {
-    float: right;
-    display: inline-block;
-    flex: 2 0 0;
-    margin-left: 2em;
+._table {
+    padding-top:10px;
 }
 
 
-/*CSS FOR TABLES*/
 
+/*CSS FOR TABLES*/
 .result_table {
     width: 100%;
 }
@@ -169,15 +164,6 @@ img {
         cursor:pointer;
     }
 
-/*
-    sandbox.bittsdevelopment.com/colcalc
-    columns : 4
-    gutter/column ratio : 0.2
-*/
-
-/*
-Each column should be 45.87% wide with a gutter space of 8.25%
-*/
 .col2 {
     width: 45.87%;
     float: left;
@@ -197,4 +183,16 @@ Each column should be 45.87% wide with a gutter space of 8.25%
 #show_page_title {
     font-weight:bold;
     font:2em;
+}
+
+.search_listpage, .pagecms_search {
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button {
+    border-radius:10px;
+    color:#FFCA00;
+    padding:5px;
 }

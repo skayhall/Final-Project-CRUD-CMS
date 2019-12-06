@@ -6,14 +6,14 @@
 <html lang="en">
 <head runat="server">
     <title>Pages CMS</title>
-    <link rel="stylesheet" type="text/css" href="Content/styles.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Calistoga|Quicksand&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header>
         <div class="website-title">
-            Welcome to the Pages CMS
+            Pages CMS
         </div>
 
         <nav>
@@ -34,7 +34,7 @@
     </div>
     <footer>
         <div class="cwidth">
-            Copyright 2019 | S Kay Creative Agency
+            Copyright 2019 | S Kay Creative 
         </div>
     </footer>
 </body>
