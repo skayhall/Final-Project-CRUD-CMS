@@ -22,6 +22,15 @@ namespace FinalProject_PagesCMS {
         protected global::System.Web.UI.WebControls.TextBox pagecms_search;
         
         /// <summary>
+        /// sql_searcher control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sql_searcher;
+        
+        /// <summary>
         /// pagecms_result control.
         /// </summary>
         /// <remarks>

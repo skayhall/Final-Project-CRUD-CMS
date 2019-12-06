@@ -11,7 +11,7 @@ namespace FinalProject_PagesCMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //We only want to show the data when the user visits the page for the first time
+            //Only show the data when the user visits the page for the first time
             //HAVE TO MAKE SURE WE PUT
             if (!Page.IsPostBack)
             {
@@ -34,8 +34,8 @@ namespace FinalProject_PagesCMS
             {
                 PageCMS new_pagecms = new PageCMS();
                 //sets page data
-                new_pagecms.SetCMStitle(page_title.Text);
-                new_pagecms.SetCMSbody(page_body.Text);
+                new_pagecms.SetCMStitle(pagecms_title.Text);
+                new_pagecms.SetCMSbody(pagecms_body.Text);
 
                 //adds page to the database
                 try
@@ -51,8 +51,8 @@ namespace FinalProject_PagesCMS
             }
 
             if (!valid)
-            {
-                pagecms.InnerHtml = "There was an error updating that page.";
+            {   //if not valid
+                PageUpdateCMS.InnerHtml = "There was an error updating that page.";
             }
 
         }
@@ -70,15 +70,16 @@ namespace FinalProject_PagesCMS
 
                 PageCMS pagecms_record = db.FindPageCMS(Int32.Parse(pagecmsid));
               
-                page_title.Text = pagecms_record.GetCMStitle();
-                page_body.Text = pagecms_record.GetCMSbody();
+                pagecms_title.Text = pagecms_record.GetCMStitle();
+                pagecms_body.Text = pagecms_record.GetCMSbody();
 
             }
-
-
+   
+            //if not valid
             if (!valid)
             {
-                pagecms.InnerHtml = "There was an error finding that student.";
+
+                PageUpdateCMS.InnerHtml = "There was an error finding that page.";
             }
         }
     }

@@ -8,6 +8,7 @@
         <asp:label for="pagecms_search" runat="server">Search:</asp:label>
         <asp:TextBox ID="pagecms_search" runat="server"></asp:TextBox>
         <asp:Button runat="server" text="submit"/>
+        <div id="sql_searcher" runat="server"></div>
 
     </div>
     <a href="NewPageCMS.aspx">Add New Page</a>

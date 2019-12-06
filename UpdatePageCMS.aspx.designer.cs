@@ -13,13 +13,13 @@ namespace FinalProject_PagesCMS {
     public partial class UpdatePageCMS {
         
         /// <summary>
-        /// PageCMS control.
+        /// PageUpdateCMS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PageCMS;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PageUpdateCMS;
         
         /// <summary>
         /// student_title control.
@@ -31,21 +31,21 @@ namespace FinalProject_PagesCMS {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl student_title;
         
         /// <summary>
-        /// page_title control.
+        /// pagecms_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox page_title;
+        protected global::System.Web.UI.WebControls.TextBox pagecms_title;
         
         /// <summary>
-        /// page_body control.
+        /// pagecms_body control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox page_body;
+        protected global::System.Web.UI.WebControls.TextBox pagecms_body;
     }
 }

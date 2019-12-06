@@ -25,9 +25,11 @@ namespace FinalProject_PagesCMS
             string query = "select * from pagecmsinfo";
             if (searchkey != "")
             {
-                query += "where pagecmstitle like '%" + searchkey + "%'";
-                query += "where pagecmsbody like '%" + searchkey + "%'";
+                query += "where pagecmstitle like '%"+searchkey+"%' ";
             }
+
+            sql_searcher.InnerHtml = query;
+
 
             var db = new PagesCMSDB();
             List<Dictionary<String, String>> rs = db.List_Query(query);

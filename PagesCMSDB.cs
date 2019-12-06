@@ -180,7 +180,7 @@ namespace FinalProject_PagesCMS
         public void UpdatePageCMS(int pagecmsid, PageCMS new_pagecms)
         {
             
-            string query = "update pagecmsinfo set pagecmstitle='{0}', pagecmsbody='{1}' where pagecmsid={3}";
+            string query = "update pagecmsinfo set pagecmstitle='{0}', pagecmsbody='{1}' where pagecmsid={2}";
             query = String.Format(query, new_pagecms.GetCMStitle(), new_pagecms.GetCMSbody(), pagecmsid);
             query = String.Format(query, new_pagecms.GetCMStitle(), new_pagecms.GetCMSbody());
 
