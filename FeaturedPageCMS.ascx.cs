@@ -17,16 +17,19 @@ namespace FinalProject_PagesCMS
 
         protected void ListFeaturedPageCMS(PagesCMSDB db)
         {
-            //tried quering for the pages id to display as a user control on the 
-            //list page and it's not working.
-            string query = " SELECT pagecmsid from pagecmsinfo ";
+            //query to select all of pages from table
+            string query = " SELECT * from pagecmsinfo ";
             List<Dictionary<String, String>> rs = db.List_Query(query);
 
             foreach (Dictionary<String, String> row in rs)
-            {
-                featured_pagecms.InnerHtml += row["Page "] + " " +  "<br>";
-
-
+            {   //displays the page titles using user control 
+                //string stores pagecmsid to be used later 
+                string pagecmsid = row["pagecmsid"];
+                //show all pages on page
+                //grab page using pagecmsid url, then grab the pagecmsid from the string we did above then show the page title - seperated by |
+                featured_pagecms.InnerHtml += "<a href=\"ShowPageCMS.aspx?pagecmsid=" + pagecmsid + "\">" + row["pagecmstitle"] + " | " + "</a>";
+                
+             
             }
         }
     }

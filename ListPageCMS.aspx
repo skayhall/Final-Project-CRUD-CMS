@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="List of Pages" Language="C#" MasterPageFile="~/Layout.Master" 
     AutoEventWireup="true" CodeBehind="ListPageCMS.aspx.cs" 
     Inherits="FinalProject_PagesCMS.ListPageCMS" %>
+    <%@ Register Src="~/FeaturedPageCMS.ascx" TagName="FeaturedPageCMS" TagPrefix="asp"%>
 
 
 <asp:Content ID="pagecms_list" ContentPlaceHolderID="body" runat="server">
@@ -13,12 +14,13 @@
     </div>
 
     <br /><a href="NewPageCMS.aspx">Add New Page</a>
-    <%//Tried adding pages user control here and its's not working >> <br /><asp:FeaturedPageCMS runat="server"></asp:FeaturedPageCMS>%>
     <div class="_table" runat="server">
         <div class="listitem">
             <div class="col2 col2header" >Page Title</div>
             <div class="col2last col2header">Page Content</div>
         </div>
         <div id="pagecms_result" runat="server"></div>
+        <%//Fixed.Pages links generated using using control. %>
+        <asp:FeaturedPageCMS runat="server"></asp:FeaturedPageCMS>
     </div>
 </asp:Content>
