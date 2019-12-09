@@ -2,6 +2,11 @@
     
 /*GENERAL CSS STYLES*/
 
+body, html {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
 .cwidth {
     max-width: 1000px;
@@ -35,11 +40,6 @@ footer {
     display: block;
 }
 
-body, html {
-    font-family: 'Quicksand', sans-serif;
-    margin:0;
-    padding:0;
-}
 
 /*NAV STYLES*/
 
@@ -139,7 +139,7 @@ img {
 
 
 
-/*CSS FOR TABLES*/
+/*css for tables*/
 .result_table {
     width: 100%;
 }
@@ -192,8 +192,82 @@ img {
     padding-bottom: 10px;
 }
 
+/*additional css*/
+
 button {
     border-radius:10px;
     color:#FFCA00;
     padding:5px;
+}
+
+
+/*CSS mobile menu styles*/
+
+
+@media (max-width: 630px) {
+
+
+    a {
+        color: #FF9672;
+    }
+
+    a:hover {
+        color: #898789;
+    }
+
+    a:visited {
+        color: #876567;
+    }
+
+    nav {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 0.5em;
+        float: right;
+        display: inline-block;
+    }
+
+    nav p {
+        float: left;
+        padding: 0px 20px;
+        display: none;
+    }
+
+    nav ul {
+        float: left;
+    }
+
+    nav ul li {
+        float: left;
+        list-style: none;
+        position: relative;
+    }
+
+    nav ul li a {
+        padding-right: 15px;
+        margin-right: 20px;
+        display: block;
+        text-decoration: none;
+    }
+
+    nav ul li ul {
+        display: block;
+        position: absolute;
+        background-color: #FFFFFF;
+        padding: 10px;
+        display: none;
+    }
+
+    nav ul li:hover ul {
+        display: block;
+    }
+
+    nav ul li ul li a {
+        padding: 8px 14px;
+    }
+
+    nav ul li ul li a:hover {
+        background-color: #ffffff;
+    }
+
+  
 }

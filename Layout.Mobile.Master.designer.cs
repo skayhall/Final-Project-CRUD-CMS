@@ -10,7 +10,7 @@
 namespace FinalProject_PagesCMS {
     
     
-    public partial class Site_Mobile {
+    public partial class Layout_Mobile {
         
         /// <summary>
         /// HeadContent control.
