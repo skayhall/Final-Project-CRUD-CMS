@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="List of Pages" Language="C#" MasterPageFile="~/Layout.Master" 
-    AutoEventWireup="true" CodeBehind="ListPageCMS.aspx.cs" Inherits="FinalProject_PagesCMS.ListPageCMS" %>
+    AutoEventWireup="true" CodeBehind="ListPageCMS.aspx.cs" 
+    Inherits="FinalProject_PagesCMS.ListPageCMS" %>
 
 
 <asp:Content ID="pagecms_list" ContentPlaceHolderID="body" runat="server">
@@ -9,9 +10,10 @@
         <asp:TextBox ID="pagecms_search" runat="server"></asp:TextBox>
         <asp:Button runat="server" text="submit"/>
         <div id="sql_searcher" runat="server"></div>
-
     </div>
+
     <br /><a href="NewPageCMS.aspx">Add New Page</a>
+    <%//Tried adding pages user control here and its's not working >> <br /><asp:FeaturedPageCMS runat="server"></asp:FeaturedPageCMS>%>
     <div class="_table" runat="server">
         <div class="listitem">
             <div class="col2 col2header" >Page Title</div>
