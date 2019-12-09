@@ -21,17 +21,19 @@ namespace FinalProject_PagesCMS
             {
                 searchkey = pagecms_search.Text;
             }
-
+            // query for MySQL to search for page title from database
             string query = "select * from pagecmsinfo";
 
             if (searchkey != "")
-            {
+            {   //annying little space between the " and WHERE was making it not work. 
+                //ahhhh so annoying. I have to remember that c# is very case sensitive and
+                //a strongly typed language. Have to really be careful. 
                 query += " where pagecmstitle like '%"+searchkey+"%' ";
             }
-
+            //displays query result
             sql_searcher.InnerHtml = query;
 
-
+            //lists pages populated from database
             var db = new PagesCMSDB();
             List<Dictionary<String, String>> rs = db.List_Query(query);
             foreach (Dictionary<String, String> row in rs)

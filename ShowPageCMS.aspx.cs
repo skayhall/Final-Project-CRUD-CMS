@@ -18,7 +18,7 @@ namespace FinalProject_PagesCMS
         }
 
         protected void ShowPageInfo(PagesCMSDB db)
-        {
+        {   //Debug.WriteLine allows to check for errors in the Debug Output window easier
             Debug.WriteLine("I am trying to show a page");
             bool valid = true;
             string pagecmsid = Request.QueryString["pagecmsid"];
@@ -27,7 +27,7 @@ namespace FinalProject_PagesCMS
 
             if (valid)
             {
-
+                //finds page title and body info and displays it
                 PageCMS page_record = db.FindPageCMS(Int32.Parse(pagecmsid));
 
                 Debug.WriteLine("the page is "+ page_record.GetCMStitle());
@@ -42,7 +42,8 @@ namespace FinalProject_PagesCMS
 
 
             if (!valid)
-            {
+            {   //displays if the user goes to the page directly and not from
+                //the list page
                 pagecms.InnerHtml = "There was an error finding that page.";
             }
         }

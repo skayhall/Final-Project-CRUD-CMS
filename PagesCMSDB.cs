@@ -11,7 +11,8 @@ namespace FinalProject_PagesCMS
     public class PagesCMSDB
     {
      
-
+        //make sure this information is exactly the same from the XAMPP and
+        //the correct permissions are given to assess it!
         private static string User { get { return "test_user"; } }
         private static string Password { get { return "test"; } }
         private static string Database { get { return "pagescms"; } }

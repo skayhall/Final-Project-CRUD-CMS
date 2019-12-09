@@ -24,7 +24,6 @@ namespace FinalProject_PagesCMS
         protected void Update_PageCMS(object sender, EventArgs e)
         {
 
-            //this connection instance is for editing data
             PagesCMSDB db = new PagesCMSDB();
 
             bool valid = true;
@@ -37,7 +36,7 @@ namespace FinalProject_PagesCMS
                 new_pagecms.SetCMStitle(pagecms_title.Text);
                 new_pagecms.SetCMSbody(pagecms_body.Text);
 
-                //adds page to the database
+                //updates page in the database
                 try
                 {
                     db.UpdatePageCMS(Int32.Parse(pagecmsid), new_pagecms);

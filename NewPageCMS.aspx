@@ -8,6 +8,7 @@
         <label>Page Title</label><br />
         <asp:TextBox runat="server" ID="page_title"></asp:TextBox>
          <asp:RequiredFieldValidator runat="server"
+            <%//Validation checker for page title text %>
             ControlToValidate="page_title"
             ErrorMessage="Please enter a page title. This cannot be blank."></asp:RequiredFieldValidator>
     </div>
@@ -15,6 +16,7 @@
         <br /><label>Write Something</label><br />
         <asp:TextBox runat="server" ID="page_body" TextMode="MultiLine" Rows="10" ></asp:TextBox>
         <asp:RequiredFieldValidator runat="server"
+        <%//Validation checker for page body text %>
         ControlToValidate="page_body"
         ErrorMessage="Please write about something. This cannot be blank."></asp:RequiredFieldValidator>
     </div>

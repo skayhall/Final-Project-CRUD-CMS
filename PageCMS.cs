@@ -13,7 +13,7 @@ namespace FinalProject_PagesCMS
         private string CMSbody;
 
         /*
-         methods which get and set values for the page - encapsulation  
+         methods that get and set values for the page - encapsulation  
         */
 
         public string GetCMStitle()
