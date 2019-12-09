@@ -23,9 +23,10 @@ namespace FinalProject_PagesCMS
             }
 
             string query = "select * from pagecmsinfo";
+
             if (searchkey != "")
             {
-                query += "where pagecmstitle like '%"+searchkey+"%' ";
+                query += " where pagecmstitle like '%"+searchkey+"%' ";
             }
 
             sql_searcher.InnerHtml = query;

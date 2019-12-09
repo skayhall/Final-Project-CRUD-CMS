@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\main_header.jpg" />
+    <Content Include="Content\images\pagescmslogo.png" />
     <Content Include="Homepage.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
